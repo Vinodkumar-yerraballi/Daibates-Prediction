@@ -1,9 +1,4 @@
+streamlit
 pandas
 numpy
-matplotlib
-seaborn
-# The serialized ColumnTransformer pipeline was trained with this version.
-# Keep it pinned so joblib can load artifacts/diabetes_model.pkl on Streamlit Cloud.
 scikit-learn==1.5.2
-streamlit
-pytest
