@@ -10,24 +10,24 @@ if gender=="Male":
 else:
     gender =0
 age=st.number_input("age",value=10)
-smoking_history=st.radio("Select Smoking_status",["No info","Never","Former","Current","Not Current","Ever"])
+smoking_history=st.radio("Select Smoking_status",['No Info', 'current', 'ever', 'former', 'never', 'not current'])
 if smoking_history=="No info":
+    smoking_history=0
+elif smoking_history=="current":
     smoking_history=1
-elif smoking_history=="Never":
-    smoking_history==2
-elif smoking_history=="Former":
-    smoking_history==3
-elif smoking_history=="Current":
-    smoking_history==4
-elif smoking_history=="Not Current":
-    smoking_history==5
+elif smoking_history=="ever":
+    smoking_history=3
+elif smoking_history=="former":
+    smoking_history=4
+elif smoking_history=="never":
+    smoking_history=5
 else:
     smoking_history=6
 hypertension=st.radio("Select Hypertension",["Yes","No"])
 if hypertension=="Yes":
-    hypertension=1
-else:
     hypertension=0
+else:
+    hypertension=1
 heart_disease=st.radio("Select Heart_disease",["Yes","No"])
 if heart_disease=="Yes":
     heart_disease=1
