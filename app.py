@@ -48,14 +48,16 @@ if st.button("Predict"):
         "blood_glucose_level":blood_glucose_level
 
     }
+    try:
+        pipeline=Predictions()
 
-    pipeline=Predictions()
+        Predictions, probability=pipeline.predict(data)
 
-    Predictions, probability=pipeline.predict(data)
-
-    if Predictions==1:
-        st.error("High Risk of Diabetes")
-    else:
-        st.success("Low risk Diabetes")
-    st.write(f"Probability: {probability:.2%}")
+        if Predictions==1:
+            st.error("High Risk of Diabetes")
+        else:
+            st.success("Low risk Diabetes")
+        st.write(f"Probability: {probability:.2%}")
+    except Exception as e:
+        st.exception(e)
 
