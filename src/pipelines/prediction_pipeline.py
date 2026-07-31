@@ -12,5 +12,5 @@ class Predictions:
     def predict(self, data):
         frame = pd.DataFrame([data]) if isinstance(data, dict) else data.copy()
         prediction = self.model.predict(frame)
-        prediction_prob = np.asarray(self.model.predict_proba(frame))[:, 1]
+        prediction_prob = np.asarray(self.model.predict_proba(frame))[0][1]
         return int(prediction[0]), float(prediction_prob[0])
