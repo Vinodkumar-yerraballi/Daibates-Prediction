@@ -10,7 +10,7 @@ if gender=="Male":
 else:
     gender =0
 age=st.number_input("age",value=10)
-smoking_history=st.radio("Select Smoking_status",['No Info', 'current', 'ever', 'former', 'never', 'not current'}])
+smoking_history=st.radio("Select Smoking_status",['No Info', 'current', 'ever', 'former', 'never', 'not current'])
 if smoking_history=="No info":
     smoking_history=0
 elif smoking_history=="current":
